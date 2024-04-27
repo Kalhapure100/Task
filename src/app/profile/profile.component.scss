@@ -1,0 +1,106 @@
+header {
+  background-color: #3390ed; /* Dark blue color */
+  padding: 20px; /* Add some padding */
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+}
+
+nav {
+  margin-right: 20px; /* Add space between navbar and profile */
+}
+
+nav ul {
+  list-style-type: none; /* Remove bullet points */
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline; /* Display list items horizontally */
+  margin-left: 10px; /* Add space between navbar items */
+}
+
+nav ul li a {
+  color: #fff; /* Set text color to white */
+  text-decoration: none; /* Remove underline */
+  padding: 10px 20px; /* Add padding */
+}
+
+nav ul li a:hover {
+  background-color: #ccd9ff; /* Change background color on hover */
+}
+.background{
+  height: 650px;
+ color: #fff;
+  background-image: url("../../assets/images/profile.png");
+  background-size: 100%;
+ background-size: cover;
+}
+.profile-content {
+  display: flex;
+  flex-direction: column; /* Arrange children vertically */
+  gap: 20px; /* Adjust the gap between elements */
+  margin-top: 50px;
+  margin-left: 20%; /* Center horizontally */
+  margin-right:30%; /* Center horizontally */
+}
+.user-photo{
+  //margin-bottom: 20px;
+  padding-right: 50px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: flex-start; /* Align children at the start of the cross axis */
+}
+
+
+.button-container {
+  margin-top: 10px; /* Adjust the margin between image and buttons */
+}
+
+.profile-description {
+flex: 1; /* Allow the profile description to grow and occupy remaining space */
+font-size: large;
+font-family: 'Times New Roman', Times, serif;
+color:black;
+}
+
+.edit-photo-btn {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-right: 10px; /* Add right margin to create space */
+}
+
+.edit-profile-btn {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+ .image {
+  max-width: 310px; 
+  max-height: 325px; 
+
+  
+}
+.email {
+  color: blue; /* Apply blue color to email */
+}
+
+.agree-btn {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+h2{
+  font-size: 30px;
+color:blue;
+}

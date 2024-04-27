@@ -1,0 +1,268 @@
+<div class="gradient main-div">
+  <h2 class="heading">Registration Form</h2>
+  <div class="container gradient">
+    <form
+      [formGroup]="registrationForm"
+      (ngSubmit)="submitForm()"
+      class="registration-form shadow"
+    >
+      <div class="left-column">
+        <div class="photo-section">
+          <!--label for="photoUrl">Upload your photo url </label>
+          <input
+            type="url"
+            id="photoUrl"
+            formControlName="photoUrl"
+            placeholder="Enter image URL"
+            class="photo-container shadow"
+          />
+          <span
+            *ngIf="registrationForm.get('photoUrl')?.touched && registrationForm.get('photoUrl')?.errors?.['required']"
+            class="error"
+            >Photo is required</span
+          >
+          <span
+            *ngIf="registrationForm.get('photoUrl')?.errors?.['pattern']"
+            class="error"
+            >Photo should less than 1MB and in jpg/png.</span
+          -->
+     
+  
+        <!--img class="img-fluid mb-3" src="../../../assets/Images/users.png" *ngIf="!profilePhoto" />
+        <img class="img-fluid mb-3" [src]="profilePhoto" *ngIf="profilePhoto" />
+        <input id="fileInput" type="file" (change)="onFileSelected($event)" accept="image/*" />
+        Upload your Photo <span class="text-danger">*</span>
+      </label>
+      <div *ngIf="!imageValid">
+        <small class="text-danger">Please Upload an Image with a resolution of <br/> 310 x 233 px</small>
+      </div-->
+  <label for="photo">Upload Photo:</label>
+    <input type="file" id="photo" (change)="onFileSelected($event)" accept="image/*">
+  <span
+              *ngIf="registrationForm.get('photo')?.touched && registrationForm.get('photo')?.errors?.['required']"
+              class="error"
+              >Photo is required</span>
+    <div *ngIf="!imageValid" class="error">Please upload an image with dimensions 310x325 px</div>
+    <img [src]="photoPreview" *ngIf="photoPreview" alt="Photo Preview">
+    </div>
+
+   </div>
+  
+<div class="form-group">
+  <label for="interest">Interest:</label>
+  <input type="text" id="interest" class="shadow" [(ngModel)]="registrationForm.value.interest" (keypress)="addInterest($event)">
+  <div class="interest-tags">
+    <span *ngFor="let interest of interests; let i = index" class="interest-tag">
+      {{ interest }}
+      <button class="remove-btn" (click)="removeInterest(i)">X</button>
+    </span>
+  </div>
+</div>
+
+
+
+
+
+
+      <div class="right-column">
+        <div class="form-content">
+          <div class="form-group inline-group">
+            <label for="firstName">First Name:</label>
+            <input
+              type="text"
+              id="firstName"
+              formControlName="firstName"
+              placeholder="First name"
+              class="shadow"
+            />
+            <span
+              *ngIf="registrationForm.get('firstName')?.errors?.['pattern']"
+              class="error"
+              >Enter only alphabets with a maximum length of 20 characters</span
+            >
+            <span
+              *ngIf="registrationForm.get('firstName')?.touched && registrationForm.get('firstName')?.errors?.['required']"
+              class="error"
+              >First Name is required</span
+            >
+          </div>
+          <div class="form-group inline-group">
+            <label for="lastName">Last Name:</label>
+            <input
+              type="text"
+              id="lastName"
+              formControlName="lastName"
+              placeholder="Last name"
+              class="shadow"
+            />
+            <span
+              *ngIf="registrationForm.get('lastName')?.touched && registrationForm.get('lastName')?.errors?.['required']"
+              class="error"
+              >Last Name is required</span
+            >
+          </div>
+          <div class="form-group">
+            <label for="age">Select Age:</label><br />
+            <input
+              type="range"
+              id="age"
+              min="20"
+              max="60"
+              formControlName="age"
+              class="shadow"
+            />
+            <span>{{ registrationForm.get("age")?.value }}</span>
+            <span
+              *ngIf="registrationForm.get('age')?.touched && registrationForm.get('age')?.errors?.['required']"
+              class="error"
+              >Age is required</span
+            >
+          </div>
+          <div class="form-group">
+            <label for="Email">Email:</label>
+            <input
+              type="text"
+              id="Email"
+              formControlName="email"
+              placeholder="Email"
+              class="shadow"
+            />
+            <span
+              *ngIf="registrationForm.get('email')?.touched && registrationForm.get('email')?.errors?.['required']"
+              class="error"
+              >Email is required</span
+            >
+          </div>
+          <!--div>
+            <input
+              type="text"
+              placeholder="Interest"
+              formControlName="interest"
+            />
+            <span
+              *ngIf="registrationForm.get('interest')?.touched && registrationForm.get('interest')?.errors?.['required']"
+              class="error"
+              >Interest is required</span
+            >
+          </div-->
+
+           <!--div class="form-group">
+  <mat-form-field class="example-chip-list">
+    <mat-chip-list #chipList aria-label="Tag selection">
+      <mat-chip *ngFor="let tag of myTag" [selectable]="true" [removable]="true" (removed)="remove(tag)">
+        {{ tag.name }}
+        <mat-icon matChipRemove>cancel</mat-icon>
+      </mat-chip>
+      <input placeholder="Add tag" class="tags" [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)" formControlName="tags" />
+    </mat-chip-list>
+  </mat-form-field>
+</div-->
+
+          <div class="form-group">
+        <label for="state">State:</label>
+        <select id="state" formControlName="state" class="shadow">
+          <option *ngFor="let state of states" [value]="state">{{ state }}</option>
+        </select>
+        <span
+          *ngIf="registrationForm.get('state')?.touched && registrationForm.get('state')?.errors?.['required']"
+          class="error"
+          >State is required</span
+        >
+      </div>
+        <div class="form-group">
+            <label for="country">Country:</label>
+            <select id="country" formControlName="country" class="shadow">
+              <option *ngFor="let country of countries" [value]="country">
+                {{ country }}
+              </option>
+            </select>
+            <span
+              *ngIf="registrationForm.get('country')?.touched && registrationForm.get('country')?.errors?.['required']"
+              class="error"
+              >Country is required</span
+            >
+
+          </div>
+          <div class="form-group">
+            <label for="addressType">Address Type:</label><br />
+            <select
+              id="addressType"
+              formControlName="addressType"
+              (change)="toggleAddressFields()"
+              class="shadow"
+            >
+              <option value="Home">Home</option>
+              <option value="Company">Company</option>
+            </select>
+            <span
+              *ngIf="registrationForm.get('addressType')?.touched && registrationForm.get('addressType')?.errors?.['required']"
+              class="error"
+              >Address is required</span
+            >
+          </div>
+          <div *ngIf="registrationForm.get('addressType')?.value === 'Home'">
+            <label for="address1">Address 1:</label>
+            <input
+              type="text"
+              id="address1"
+              formControlName="address1"
+              placeholder="Address1"
+              class="shadow"
+            />
+            <label for="address2">Address 2:</label>
+            <input
+              type="text"
+              id="address2"
+              formControlName="address2"
+              placeholder=" Address2"
+              class="shadow"
+            />
+          </div>
+          <div *ngIf="registrationForm.get('addressType')?.value === 'Company'">
+            <label for="companyAddress1">Company Address 1:</label><br />
+            <input
+              type="text"
+              id="companyAddress1"
+              formControlName="companyAddress1"
+              placeholder="Company Address1"
+              class="shadow"
+            />
+            <label for="companyAddress2">Company Address 2:</label><br />
+            <input
+              type="text"
+              id="companyAddress2"
+              formControlName="companyAddress2"
+              placeholder="Company Address2"
+              class="shadow"
+            />
+          </div>
+          <div class="form-group">
+            <input type="checkbox" formControlName="newsLetter">Subscribe to Newsletter
+          </div>
+
+          <div class="form-group text-right button-content">
+            <div class="button-section">
+              <div class="button-container">
+                <button
+                  type="submit"
+                  [disabled]="!registrationForm.valid"
+                  class="submit-btn shadow"
+                >
+                  Submit
+                </button>
+                <button
+                  type="button"
+                  class="cancel-button"
+                  (click)="cancel()"
+                  class="cancel-btn shadow"
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

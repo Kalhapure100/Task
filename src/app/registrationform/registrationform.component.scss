@@ -1,0 +1,236 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 95vh;
+  //background-color: aqua;
+
+
+}
+ .background{
+  height: 650px;
+ color: #fff;
+  //background-image: url("../../assets/images/Registeration.jpg");
+//   background-size: 100%;
+//   background-size: cover;
+}
+/*.photo-section {
+  position: relative;
+}*/
+
+/*.passport-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border: 2px solid #ccc;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: #ccc;
+}*/
+
+ /*.photo-container {
+  position: relative;
+  width: 200px; 
+  height: 200px;
+  margin-bottom: 10px;
+}*/
+input {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.chip {
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 4px;
+  background-color: #f1f1f1;
+  border-radius: 12px;
+}
+
+.chip button {
+  margin-left: 6px;
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.chip button:hover {
+  color: #555;
+}
+
+
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.registration-form {
+  background-color: #67cfff; /* Color only applied to the form */
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%; /* Decrease the width of the form */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  grid-column-gap: 20px; /* Adjust gap between columns as needed */
+}
+
+h2 {
+  text-align: center;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="url"],
+select,
+textarea {
+  width: 100%; /* Adjust width as needed */
+  padding: 16px; /* Increase padding for height */
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+ // box-sizing: border-box;
+}
+// input[type="text"] {
+//   width: 100%; /* Set the width to 100% to fill the available space */
+//   padding: 12px; /* Adjust padding as needed */
+//   border: 2px solid #ccc;
+//   border-radius: 5px;
+//   font-size: 16px;
+//   //box-sizing: border-box;
+// }
+
+.address2 {
+  margin-top: 10px; /* Add margin between address 1 and address 2 */
+}
+
+.button-section {
+  margin-top: 20px;
+  display: flex; /* Use flexbox */
+  justify-content: flex-end; /* Align buttons to the right */
+}
+
+.button-container {
+  display: flex;
+  margin-top: 10px;
+}
+
+.submit-btn,
+.cancel-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 24px; /* Increase padding for buttons */
+  cursor: pointer;
+  margin-right: 20px; /* Adjust margin between buttons */
+  border-radius: 5px; /* Add border radius to buttons */
+}
+
+.cancel-btn {
+  background-color: #dc3545;
+}
+
+.submit-btn:hover,
+.cancel-btn:hover {
+  opacity: 0.8;
+}
+
+.error {
+  color: red;
+}
+
+.left-column {
+  width: 40%; /* Adjust as needed */
+}
+
+.right-column {
+  width: 60%; /* Adjust as needed */
+}
+
+.photo-section {
+  margin-bottom: 20px;
+}
+
+.photo-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+.photo-preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+
+.passport-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border: 2px solid #ccc;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: #ccc;
+}
+
+input {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.chip {
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 4px;
+  color: black;
+  background-color: #f1f1f1;
+  border-radius: 12px;
+  width: 200px;
+}
+
+.chip button {
+  margin-left: 6px;
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.chip button:hover {
+  color: #555;
+}
